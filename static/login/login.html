@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>登录</title>
+    <link rel="stylesheet" media="screen" href="../base.css" />
+    <link rel="stylesheet" media="screen" href="./login.css" />
+</head>
+<body>
+    <div id="app">
+        <div class="box">
+            <h1>Login</h1>
+            <div class="login">
+                <label for="user">
+                    <i>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-yonghu"></use>
+                        </svg>
+                    </i>
+                    <input id="user" v-model="user" type="text">
+                </label>
+                <label for="password">
+                    <i>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-mima"></use>
+                        </svg>
+                    </i>
+                    <input id="password" v-model="password" type="password" @keyup.enter="login">
+                </label>
+                <p v-show="msg!=''" class="msg">
+                    <i>
+                        <svg class="icon" aria-hidden="true">
+                            <use xlink:href="#icon-cancel"></use>
+                        </svg>
+                    </i>
+                    <span v-text="msg"></span> 
+                </p>
+            </div>
+            <button @click="login">Login</button>
+        </div>
+    </div>
+    <script src="//at.alicdn.com/t/font_601025_e9cahoiai2ju4n29.js"></script>
+    <script src="./vue.min.js"></script>
+    <script src="./axios.min.js"></script>
+    <script src="./login.js"></script>
+</body>
+</html>
